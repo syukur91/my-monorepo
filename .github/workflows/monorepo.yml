@@ -1,0 +1,13 @@
+name: monorepo
+
+on: [push]
+
+jobs:
+ build:
+
+   steps:
+   - name: Monorepo Labeler
+     uses: adamzolyak/monorepo-pr-labeler-action@master
+     env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
+       BASE_DIRS: "src"
